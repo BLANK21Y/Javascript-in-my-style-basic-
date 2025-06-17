@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Learning Platform</title>
+    <link rel="stylesheet" href="js-tasks.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <button id="themeToggle" class="theme-btn">
+            <span class="theme-icon">🌙</span>
+        </button>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <button id="backToHome" href="index.html" class="back-btn">← Back</button>
+            <div class="logo">
+                <span class="js-bracket">{</span>
+                <span class="js-text">JS</span>
+                <span class="js-bracket">}</span>
+                <span class="learning-text">Learning Platform</span>
+            </div>
+            <button id="backToMain" class="back-btn" style="display: none;">← Back to Tasks</button>
+        </header>
+
+        <!-- Main Content -->
+        <main id="mainContent" class="main-content">
+            <!-- Progress Overview -->
+            <section class="progress-overview">
+                <h2>Your Learning Progress</h2>
+                <div class="progress-sections">
+                    <div class="progress-section">
+                        <h3>Beginner</h3>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="beginnerProgress" data-progress="0"></div>
+                        </div>
+                        <span class="progress-text">0/10 completed</span>
+                    </div>
+                    <div class="progress-section">
+                        <h3>Intermediate</h3>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="intermediateProgress" data-progress="0"></div>
+                        </div>
+                        <span class="progress-text">0/10 completed</span>
+                    </div>
+                    <div class="progress-section">
+                        <h3>Advanced</h3>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="advancedProgress" data-progress="0"></div>
+                        </div>
+                        <span class="progress-text">0/10 completed</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tasks Sections -->
+            <section class="tasks-container">
+                <!-- Beginner Section -->
+                <div class="task-section">
+                    <h2 class="section-title">Beginner Concepts</h2>
+                    <div class="task-card" data-level="beginner" data-task="0">
+                        <div class="task-header">
+                            <h3>Introduction to JavaScript</h3>
+                            <span class="task-status" id="beginner-0-status">Not Started</span>
+                        </div>
+                        <p class="task-description">Learn the basics of JavaScript syntax and how to include it in HTML.</p>
+                        <button class="start-task-btn">Start Task</button>
+                    </div>
+                    <div class="task-card" data-level="beginner" data-task="1">
+                        <div class="task-header">
+                            <h3>Variables</h3>
+                            <span class="task-status" id="beginner-1-status">Not Started</span>
+                        </div>
+                        <p class="task-description">Declare and use variables with let, const, and var.</p>
+                        <button class="start-task-btn">Start Task</button>
+                    </div>
+                    <div class="task-card" data-level="beginner" data-task="2">
+                        <div class="task-header">
+                            <h3>Data Types</h3>
+                            <span class="task-status" id="beginner-2-status">Not Started</span>
+                        </div>
+                        <p class="task-description">Work with strings, numbers, booleans, and other data types.</p>
+                        <button class="start-task-btn">Start Task</button>
+                    </div>
+                    <div class="task-card" data-level="beginner" data-task="3">
+                        <div class="task-header">
+                            <h3>Operators</h3>
+                            <span class="task-status" id="beginner-3-status">Not Started</span>
+                        </div>
+                        <p class="task-description">Use arithmetic, comparison, and logical operators.</p>
+                        <button class="start-task-btn">Start Task</button>
+                    </div>
+                    <div class="task-card" data-level="beginner" data-task="4">
+                        <div class="task-header">
+                            <h3>Conditionals</h3>
+                            <span class="task-status" id="beginner-4-status">Not Started</span>
+                        </div>
+                        <p class="task-description">Control program flow with if, else if, and else statements.</p>
+                        <button class="start-task-btn">Start Task</button>
+                    </div>
+                    <div class="task-card" data-level="beginner" data-task="5">
+                        <div class="task-header">
+                            <h3>Loops</h3>
+                            <span class="task-status" id="beginner-5-status">Not Started</span>
+                        </div>
+                        <p class="task-description">Create loops using for, while, and do-while statements.</p>
+                        <button class="start-task-btn">Start Task</button>
+                    </div>
+                    <div class="task-card" data-level="beginner" data-task="6">
+                        <div class="task-header">
+                            <h3>Functions</h3>
+                            <span class="task-status" id="beginner-6-status">Not Started</span>
+                        </div>
+                        <p class="task-description">Define and call functions with parameters and return values.</p>
+                        <button class="start-task-btn">Start Task</button>
+                    </div>
+                    <div class="task-card" data-level="beginner" data-task="7">
+                        <div class="task-header">
+                            <h3>Scope</h3>
+                            <span class="task-status" id="beginner-7-status">Not Started</span>
+                        </div>
+                        <p class="task-description">Understand global and local scope in JavaScript.</p>
+                        <button class="start-task-btn">Start Task</button>
+                    </div>
+                    <div class="task-card" data-level="beginner" data-task="8">
+                        <div class="task-header">
+                            <h3>Events & DOM Manipulation</h3>
+                            <span class="task-status" id="beginner-8-status">Not Started</span>
+                        </div>
+                        <p class="task-description">Handle events and manipulate DOM elements.</p>
+                        <button class="start-task-btn">Start Task</button>
+                    </div>
+                    <div class="task-card" data-level="beginner" data-task="9">
+                        <div class="task-header">
+                            <h3>Basic DOM Selection</h3>
+                            <span class="task-status" id="beginner-9-status">Not Started</span>
+                        </div>
+                        <p class="task-description">Select and modify HTML elements using JavaScript.</p>
+                        <button class="start-task-btn">Start Task</button>
+                    </div>
+                </div>
+
+                <!-- Intermediate Section -->
+                <div class="task-section">
+                    <h2 class="section-title">Intermediate Concepts</h2>
+                    <div class="task-card" data-level="intermediate" data-task="0">
+                        <div class="task-header">
+                            <h3>Arrays & Methods</h3>
+                            <span class="task-status" id="intermediate-0-status">Not Started</span>
+                        </div>
+                        <p class="task-description">Work with arrays and use built-in array methods.</p>
+                        <button class="start-task-btn">Start Task</button>
+                    </div>
+                    <div class="task-card" data-level="intermediate" data-task="1">
+                        <div class="task-header">
+                            <h3>Objects & JSON</h3>
+                            <span class="task-status" id="intermediate-1-status">Not Started</span>
+                        </div>
+                        <p class="task-description">Create and manipulate objects and work with JSON data.</p>
+                        <button class="start-task-btn">Start Task</button>
+                    </div>
+                    <div class="task-card" data-level="intermediate" data-task="2">
+                        <div class="task-header">
+                            <h3>ES6 Features</h3>
+                            <span class="task-status" id="intermediate-2-status">Not Started</span>
+                        </div>
+                        <p class="task-description">Use arrow functions, template literals, and destructuring.</p>
+                        <button class="start-task-btn">Start Task</button>
+                    </div>
+                    <div class="task-card" data-level="intermediate" data-task="3">
+                        <div class="task-header">
+                            <h3>DOM Manipulation</h3>
+                            <span class="task-status" id="intermediate-3-status">Not Started</span>
+                        </div>
+                        <p class="task-description">Advanced DOM manipulation and traversal techniques.</p>
+                        <button class="start-task-btn">Start Task</button>
+                    </div>
+                    <div class="task-card" data-level="intermediate" data-task="4">
+                        <div class="task-header">
+                            <h3>Event Listeners</h3>
+                            <span class="task-status" id="intermediate-4-status">Not Started</span>
+                        </div>
+                        <p class="task-description">Handle complex events and event delegation.</p>
+                        <button class="start-task-btn">Start Task</button>
+                    </div>
+                    <div class="task-card" data-level="intermediate" data-task="5">
+                        <div class="task-header">
+                            <h3>Timing Functions</h3>
+                            <span class="task-status" id="intermediate-5-status">Not Started</span>
+                        </div>
+                        <p class="task-description">Use setTimeout, setInterval, and timing functions.</p>
+                        <button class="start-task-btn">Start Task</button>
+                    </div>
+                    <div class="task-card" data-level="intermediate" data-task="6">
+                        <div class="task-header">
+                            <h3>Error Handling</h3>
+                            <span class="task-status" id="intermediate-6-status">Not Started</span>
+                        </div>
+                        <p class="task-description">Implement try-catch blocks and error handling.</p>
+                        <button class="start-task-btn">Start Task</button>
+                    </div>
+                    <div class="task-card" data-level="intermediate" data-task="7">
+                        <div class="task-header">
+                            <h3>Regular Expressions</h3>
+                            <span class="task-status" id="intermediate-7-status">Not Started</span>
+                        </div>
+                        <p class="task-description">Use regular expressions for pattern matching.</p>
+                        <button class="start-task-btn">Start Task</button>
+                    </div>
+                    <div class="task-card" data-level="intermediate" data-task="8">
+                        <div class="task-header">
+                            <h3>Form Validation</h3>
+                            <span class="task-status" id="intermediate-8-status">Not Started</span>
+                        </div>
+                        <p class="task-description">Validate form inputs using JavaScript.</p>
+                        <button class="start-task-btn">Start Task</button>
+                    </div>
+                    <div class="task-card" data-level="intermediate" data-task="9">
+                        <div class="task-header">
+                            <h3>Local Storage</h3>
+                            <span class="task-status" id="intermediate-9-status">Not Started</span>
+                        </div>
+                        <p class="task-description">Store and retrieve data using localStorage.</p>
+                        <button class="start-task-btn">Start Task</button>
+                    </div>
+                </div>
+
+                <!-- Advanced Section -->
+                <div class="task-section">
+                    <h2 class="section-title">Advanced Topics</h2>
+                    <div class="task-card" data-level="advanced" data-task="0">
+                        <div class="task-header">
+                            <h3>Classes and Inheritance</h3>
+                            <span class="task-status" id="advanced-0-status">Not Started</span>
+                        </div>
+                        <p class="task-description">Create classes and implement inheritance in JavaScript.</p>
+                        <button class="start-task-btn">Start Task</button>
+                    </div>
+                    <div class="task-card" data-level="advanced" data-task="1">
+                        <div class="task-header">
+                            <h3>Promises and Async/Await</h3>
+                            <span class="task-status" id="advanced-1-status">Not Started</span>
+                        </div>
+                        <p class="task-description">Handle asynchronous operations with promises and async/await.</p>
+                        <button class="start-task-btn">Start Task</button>
+                    </div>
+                    <div class="task-card" data-level="advanced" data-task="2">
+                        <div class="task-header">
+                            <h3>Fetch API and AJAX</h3>
+                            <span class="task-status" id="advanced-2-status">Not Started</span>
+                        </div>
+                        <p class="task-description">Make HTTP requests using fetch API and handle responses.</p>
+                        <button class="start-task-btn">Start Task</button>
+                    </div>
+                    <div class="task-card" data-level="advanced" data-task="3">
+                        <div class="task-header">
+                            <h3>Modules</h3>
+                            <span class="task-status" id="advanced-3-status">Not Started</span>
+                        </div>
+                        <p class="task-description">Use ES6 modules to organize and import/export code.</p>
+                        <button class="start-task-btn">Start Task</button>
+                    </div>
+                    <div class="task-card" data-level="advanced" data-task="4">
+                        <div class="task-header">
+                            <h3>Closures & Callback Functions</h3>
+                            <span class="task-status" id="advanced-4-status">Not Started</span>
+                        </div>
+                        <p class="task-description">Understand closures and implement callback patterns.</p>
+                        <button class="start-task-btn">Start Task</button>
+                    </div>
+                    <div class="task-card" data-level="advanced" data-task="5">
+                        <div class="task-header">
+                            <h3>Functional Programming</h3>
+                            <span class="task-status" id="advanced-5-status">Not Started</span>
+                        </div>
+                        <p class="task-description">Apply functional programming concepts in JavaScript.</p>
+                        <button class="start-task-btn">Start Task</button>
+                    </div>
+                    <div class="task-card" data-level="advanced" data-task="6">
+                        <div class="task-header">
+                            <h3>Web APIs</h3>
+                            <span class="task-status" id="advanced-6-status">Not Started</span>
+                        </div>
+                        <p class="task-description">Work with various Web APIs like Geolocation, Canvas, etc.</p>
+                        <button class="start-task-btn">Start Task</button>
+                    </div>
+                    <div class="task-card" data-level="advanced" data-task="7">
+                        <div class="task-header">
+                            <h3>Design Patterns</h3>
+                            <span class="task-status" id="advanced-7-status">Not Started</span>
+                        </div>
+                        <p class="task-description">Implement common JavaScript design patterns.</p>
+                        <button class="start-task-btn">Start Task</button>
+                    </div>
+                    <div class="task-card" data-level="advanced" data-task="8">
+                        <div class="task-header">
+                            <h3>Performance Optimization</h3>
+                            <span class="task-status" id="advanced-8-status">Not Started</span>
+                        </div>
+                        <p class="task-description">Optimize JavaScript code for better performance.</p>
+                        <button class="start-task-btn">Start Task</button>
+                    </div>
+                    <div class="task-card" data-level="advanced" data-task="9">
+                        <div class="task-header">
+                            <h3>Testing & Debugging</h3>
+                            <span class="task-status" id="advanced-9-status">Not Started</span>
+                        </div>
+                        <p class="task-description">Write unit tests and implement debugging strategies.</p>
+                        <button class="start-task-btn">Start Task</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Certificate Section -->
+            <section class="certificate-section">
+                <h2>Certificate Tracker</h2>
+                <div class="certificate-tracker">
+                    <div class="certificate-status" id="certificateStatus">
+                        <div class="lock-icon">🔒</div>
+                        <span>0/30 Tasks Completed</span>
+                    </div>
+                </div>
+
+                <!-- Sample Certificate Preview -->
+                <div class="certificate-preview">
+                    <h3>Sample Certificate Preview</h3>
+                    <div class="certificate-container">
+                        <img src="1.jpg" alt="Sample Certificate" class="certificate-image">
+                    </div>
+                </div>
+
+                <!-- Certificate Generator (hidden initially) -->
+                <div class="certificate-generator" id="certificateGenerator" style="display: none;">
+                    <h3>Generate Your Certificate</h3>
+                    <div class="name-input-container">
+                        <label for="userName">Enter your name:</label>
+                        <input type="text" id="userName" placeholder="John Doe" value="John Doe">
+                        <button id="generateCertificate" class="generate-btn">Generate Certificate</button>
+                    </div>
+                    
+                    <!-- Generated Certificate -->
+                    <div class="generated-certificate" id="generatedCertificate" style="display: none;">
+                        <canvas id="certificateCanvas" width="1200" height="900"></canvas>
+                        <div class="download-options">
+                            <h4>Download Certificate:</h4>
+                            <button onclick="downloadCertificate('png')" class="download-btn">PNG</button>
+                            <button onclick="downloadCertificate('jpg')" class="download-btn">JPG</button>
+                            <button onclick="downloadCertificate('jpeg')" class="download-btn">JPEG</button>
+                            <button onclick="downloadCertificate('pdf')" class="download-btn">PDF</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Editor Interface (hidden initially) -->
+        <div id="editorInterface" class="editor-interface" style="display: none;">
+            <div class="editor-container">
+                <div class="task-instructions" id="taskInstructions">
+                    <!-- Task instructions will be loaded here -->
+                </div>
+                
+                <div class="code-editor-container">
+                    <div class="editor-header">
+                        <div class="editor-tabs">
+                            <div class="tab" id="htmlTab">index.html</div>
+                            <div class="tab active" id="jsTab">script.js</div>
+                        </div>
+                        <div class="editor-actions">
+                            <button id="runCode" class="action-btn run-btn">▶ Run</button>
+                            <button id="validateCode" class="action-btn validate-btn">✓ Validate</button>
+                            <button id="backToTasks" class="action-btn back-btn">← Back</button>
+                        </div>
+                    </div>
+                    
+                    <div class="editor-content">
+                        <div class="code-editor">
+                            <textarea id="htmlEditor" placeholder="Write your HTML structure here..." style="display: none;"></textarea>
+                            <textarea id="jsEditor" placeholder="Write your JavaScript code here..."></textarea>
+                        </div>
+                        
+                        <div class="preview-panel" id="previewPanel">
+                            <div class="preview-header">Live Preview</div>
+                            <iframe id="previewFrame"></iframe>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="validation-result" id="validationResult" style="display: none;">
+                    <!-- Validation results will appear here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js-tasks.js"></script>
+</body>
+</html>
